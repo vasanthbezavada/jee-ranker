@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: jee-ranker
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: h2
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: none
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+server:
+  servlet:
+    context-path: /api/v1
+
+springdoc:
+  api-docs:
+    path: /docs
+  show-actuator: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
