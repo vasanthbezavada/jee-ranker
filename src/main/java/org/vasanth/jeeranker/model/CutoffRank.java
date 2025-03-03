@@ -1,11 +1,11 @@
 package org.vasanth.jeeranker.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
+@Data
 @Entity
 @Table(name = "CUTOFF_RANK")
 public class CutoffRank {
@@ -30,10 +30,10 @@ public class CutoffRank {
   private String gender;
 
   @Column(name = "OPENING_RANK", length = 225)
-  private String openingRank;
+  private Integer openingRank;
 
   @Column(name = "CLOSING_RANK", length = 225)
-  private String closingRank;
+  private Integer closingRank;
 
   @Column(name = "ACADEMIC_YEAR")
   private Integer academicYear;
@@ -43,4 +43,7 @@ public class CutoffRank {
 
   @Column(name = "TYPE", length = 225)
   private String type;
+
+  @Column(name = "IS_PREPARATORY")
+  private Boolean isPreparatory;
 }

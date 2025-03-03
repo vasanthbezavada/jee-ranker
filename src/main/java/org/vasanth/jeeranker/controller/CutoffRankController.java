@@ -1,5 +1,7 @@
 package org.vasanth.jeeranker.controller;
 
+import static org.vasanth.jeeranker.controller.WebConstants.*;
+
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.ExampleObject;
@@ -43,20 +45,9 @@ public class CutoffRankController {
                       mediaType = "application/json",
                       examples = {
                         @ExampleObject(
-                            name = "Search by Program",
-                            description = "Filter records where program is 'Computer Science'",
-                            value =
-                                "{ \"filters\": [ { \"searchKey\": \"program\", \"value\": \"Computer Science\", \"operator\": \"EQUAL\" } ] }"),
-                        @ExampleObject(
-                            name = "Search by Rank Range",
-                            description = "Find records where closing rank is less than 1000",
-                            value =
-                                "{ \"filters\": [ { \"searchKey\": \"closingRank\", \"value\": \"1000\", \"operator\": \"LESS_THAN\" } ] }"),
-                        @ExampleObject(
-                            name = "Multiple Filters",
-                            description = "Filter by program and closing rank together",
-                            value =
-                                "{ \"filters\": [ { \"searchKey\": \"program\", \"value\": \"Mechanical Engineering\", \"operator\": \"EQUAL\" }, { \"searchKey\": \"closingRank\", \"value\": \"500\", \"operator\": \"GREATER_THAN\" } ] }")
+                            name = EXAMPLE_1,
+                            description = EXAMPLE_1_DESCRIPTION,
+                            value = EXAMPLE_1_VALUE)
                       })),
       responses = {
         @ApiResponse(responseCode = "200", description = "Search executed successfully"),

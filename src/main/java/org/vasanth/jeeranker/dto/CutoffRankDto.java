@@ -8,15 +8,15 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 public class CutoffRankDto {
-
   private String institute;
   private String program;
   private String quota;
   private String seatType;
   private String gender;
-  private String openingRank;
-  private String closingRank;
+  private Integer openingRank;
+  private Integer closingRank;
   private Integer academicYear;
   private Integer round;
   private String type;
+  private Boolean isPreparatory;
 }
